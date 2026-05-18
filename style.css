@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #F9F9FB;
+  color: #1C1C1C;
+  line-height: 1.6;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background: linear-gradient(
+      rgba(0,0,0,0.55),
+      rgba(0,0,0,0.55)
+    ),
+    url("images/banner.jpg") center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.overlay h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.overlay p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* BUTTONS */
+.btn {
+  padding: 12px 25px;
+  border-radius: 30px;
+  background: #6A0DAD;
+  color: white;
+  text-decoration: none;
+  margin: 10px;
+  transition: 0.3s;
+  display: inline-block;
+  font-weight: 500;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  background: #FF2E93;
+}
+
+.whatsapp {
+  background: #25D366;
+}
+
+/* SECTIONS */
+section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* COUNTDOWN */
+.countdown {
+  background: white;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 15px;
+  width: fit-content;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+#timer {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-wrap: wrap;
+}
+
+/* ABOUT */
+.about p {
+  max-width: 700px;
+  margin: auto;
+  color: #555;
+}
+
+/* INFO CARDS */
+.cards {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.card {
+  padding: 25px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  min-width: 200px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* GALLERY */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.grid img {
+  width: 100%;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.grid img:hover {
+  transform: scale(1.03);
+}
+
+/* VIDEO */
+.video iframe {
+  width: 100%;
+  max-width: 700px;
+  height: 350px;
+  margin-top: 20px;
+  border-radius: 12px;
+  border: none;
+}
+
+/* FORM */
+form {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  max-width: 450px;
+  margin: auto;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 10px 0;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: #6A0DAD;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #6A0DAD;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #FF2E93;
+}
+
+/* FOOTER */
+footer {
+  padding: 30px;
+  background: #111;
+  color: white;
+  text-align: center;
+}
+
+/* WHATSAPP FLOAT */
+.float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.float:hover {
+  transform: scale(1.1);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+  .overlay h1 {
+    font-size: 2rem;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+
+  #timer {
+    gap: 10px;
+  }
+
+  .video iframe {
+    height: 250px;
+  }
+}
+.popup {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
