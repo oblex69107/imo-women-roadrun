@@ -1,94 +1,666 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Women Road Run Imo</title>
-  <link rel="stylesheet" href="style.css"/>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Imo Women Run</title>
+
+  <!-- GOOGLE FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
 
-<!-- HERO -->
-<header class="hero">
-  <div class="overlay">
-    <h1>Women Road Run Imo 2026</h1>
-    <p>Run Together • Stay Strong • Stay Healthy</p>
+  <!-- ======================================= -->
+  <!-- NAVBAR -->
+  <!-- ======================================= -->
 
-    <div class="hero-buttons">
-      <a href="#register" class="btn">Register Now</a>
-      <a href="https://wa.me/2349039998168" class="btn whatsapp">WhatsApp</a>
+  <header class="navbar">
+
+    <div class="logo">
+      IMO WOMEN RUN
     </div>
-  </div>
-</header>
 
-<!-- COUNTDOWN -->
-<section class="countdown">
-  <h2>Event Starts In</h2>
-  <div id="timer">
-    <div><span id="days"></span>Days</div>
-    <div><span id="hours"></span>Hours</div>
-    <div><span id="minutes"></span>Minutes</div>
-    <div><span id="seconds"></span>Seconds</div>
-  </div>
-</section>
+    <nav class="nav-links">
 
-<!-- ABOUT -->
-<section class="about">
-  <h2>About The Event</h2>
-  <p>
-    Women Road Run Imo 2026 is a fitness and empowerment event designed
-    to promote health, unity, and active lifestyles among women in Imo State.
-  </p>
-</section>
+      <a href="#about">About</a>
 
-<!-- EVENT INFO -->
-<section class="info">
-  <h2>Event Information</h2>
-  <div class="cards">
-    <div class="card">📅 Date: June 20, 2026</div>
-    <div class="card">📍 Location: Owerri, Imo State</div>
-    <div class="card">⏰ Time: 7:00 AM</div>
-    <div class="card">🏃 Distance: 5KM / 10KM</div>
-  </div>
-</section>
+      <a href="#stats">Stats</a>
 
-<!-- GALLERY -->
-<section class="gallery">
-  <h2>Gallery</h2>
-  <div class="grid">
-    <img src="images/img1.jpg" alt="">
-    <img src="images/img2.jpg" alt="">
-    <img src="images/img3.jpg" alt="">
-  </div>
+      <a href="#sponsors">Sponsors</a>
 
-  <!-- VIDEO -->
-  <div class="video">
-    <iframe width="1363" height="767" src="https://www.youtube.com/embed/CSCJ7TA3GHs" title="Only Women Road Race Set To Hold November 12" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  </div>
-</section>
+      <a href="#faq">FAQ</a>
 
-<!-- REGISTRATION -->
-<section class="register" id="register">
-  <h2>Register Now</h2>
+    </nav>
 
-  <form id="regForm">
-    <input type="text" placeholder="Full Name" required />
-    <input type="email" placeholder="Email" required />
-    <input type="tel" placeholder="Phone Number" required />
-    <input type="number" placeholder="Age" required />
+    <a href="register.html" class="nav-btn">
+      Register Now
+    </a>
 
-    <button type="submit">Submit</button>
-  </form>
-</section>
+  </header>
 
-<!-- FOOTER -->
-<footer>
-  <p>© 2026 Women Road Run Imo</p>
-</footer>
+  <!-- ======================================= -->
+  <!-- HERO SECTION -->
+  <!-- ======================================= -->
 
-<!-- WHATSAPP FLOAT -->
-<a class="float" href="https://wa.me/2349039998168">💬</a>
+  <section class="hero-section">
 
-<script src="script.js"></script>
+    <!-- DARK OVERLAY -->
+    <div class="hero-overlay"></div>
+
+    <!-- GLOW EFFECTS -->
+    <div class="pink-glow"></div>
+
+    <div class="purple-glow"></div>
+
+    <!-- HERO CONTENT -->
+    <div class="hero-container">
+
+      <!-- LEFT SIDE -->
+      <div class="hero-text">
+
+        <div class="hero-badge">
+          Imo Women Run 2026
+        </div>
+
+        <h1>
+          Run For Health.
+          <br>
+          Run For Unity.
+          <br>
+          Run For Her.
+        </h1>
+
+        <p>
+          Join thousands of women across Imo State for a premium
+          wellness and fitness movement focused on empowerment,
+          unity, confidence and healthy living.
+        </p>
+
+        <!-- BUTTONS -->
+        <div class="hero-buttons">
+
+          <a href="register.html" class="register-btn">
+            Register Now
+          </a>
+
+          <a
+            href="https://wa.me/2348000000000"
+            class="whatsapp-btn"
+          >
+            Contact Us
+          </a>
+
+        </div>
+
+        <!-- FLOATING STATS -->
+        <div class="floating-stats">
+
+          <div class="mini-stat">
+
+            <h3>2500+</h3>
+
+            <span>Participants</span>
+
+          </div>
+
+          <div class="mini-stat">
+
+            <h3>27</h3>
+
+            <span>LGAs</span>
+
+          </div>
+
+          <div class="mini-stat">
+
+            <h3>14</h3>
+
+            <span>Sponsors</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- RIGHT SIDE -->
+      <!-- GLASS FORM CARD -->
+
+      <div class="hero-form-card">
+
+        <div class="form-badge">
+          Quick Registration
+        </div>
+
+        <h2>
+          Start Your Registration
+        </h2>
+
+        <p>
+          Fill the quick form below to continue to the full registration page.
+        </p>
+
+        <form id="quickForm">
+
+          <!-- NAME -->
+
+          <div class="input-group">
+
+            <label>
+              Full Name
+            </label>
+
+            <input
+              type="text"
+              placeholder="Enter your full name"
+              required
+            >
+
+          </div>
+
+          <!-- GRID -->
+
+          <div class="form-grid">
+
+            <div class="input-group">
+
+              <label>
+                Phone Number
+              </label>
+
+              <input
+                type="tel"
+                placeholder="0800 000 0000"
+                required
+              >
+
+            </div>
+
+            <div class="input-group">
+
+              <label>
+                Email Address
+              </label>
+
+              <input
+                type="email"
+                placeholder="you@example.com"
+                required
+              >
+
+            </div>
+
+          </div>
+
+          <!-- GENDER -->
+
+          <div class="input-group">
+
+            <label>
+              Gender
+            </label>
+
+            <select required>
+
+              <option value="">
+                Select Gender
+              </option>
+
+              <option>
+                Female
+              </option>
+
+              <option>
+                Male
+              </option>
+
+            </select>
+
+          </div>
+
+          <!-- BUTTON -->
+
+          <button type="submit" class="continue-btn">
+
+            Continue Registration
+
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ======================================= -->
+  <!-- STATS SECTION -->
+  <!-- ======================================= -->
+
+  <section class="stats-section" id="stats">
+
+    <div class="section-header">
+
+      <span>
+        Event Highlights
+      </span>
+
+      <h2>
+        A Movement Across Imo State
+      </h2>
+
+    </div>
+
+    <div class="stats-grid">
+
+      <div class="stat-card">
+
+        <h3>2500+</h3>
+
+        <p>Women Registered</p>
+
+      </div>
+
+      <div class="stat-card">
+
+        <h3>27</h3>
+
+        <p>LGAs Represented</p>
+
+      </div>
+
+      <div class="stat-card">
+
+        <h3>14</h3>
+
+        <p>Sponsors & Partners</p>
+
+      </div>
+
+      <div class="stat-card">
+
+        <h3>4</h3>
+
+        <p>Race Categories</p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ======================================= -->
+  <!-- COUNTDOWN SECTION -->
+  <!-- ======================================= -->
+
+  <section class="countdown-section">
+
+    <div class="countdown-card">
+
+      <div class="countdown-text">
+
+        <span>
+          Race Countdown
+        </span>
+
+        <h2>
+          The Movement Begins Soon
+        </h2>
+
+      </div>
+
+      <div class="countdown-grid">
+
+        <div class="count-box">
+
+          <h3 id="days">
+            45
+          </h3>
+
+          <p>
+            Days
+          </p>
+
+        </div>
+
+        <div class="count-box">
+
+          <h3 id="hours">
+            12
+          </h3>
+
+          <p>
+            Hours
+          </p>
+
+        </div>
+
+        <div class="count-box">
+
+          <h3 id="minutes">
+            08
+          </h3>
+
+          <p>
+            Minutes
+          </p>
+
+        </div>
+
+        <div class="count-box">
+
+          <h3 id="seconds">
+            22
+          </h3>
+
+          <p>
+            Seconds
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ======================================= -->
+  <!-- ABOUT SECTION -->
+  <!-- ======================================= -->
+
+  <section class="about-section" id="about">
+
+    <div class="about-container">
+
+      <!-- IMAGE -->
+
+      <div class="about-image">
+
+        <img
+          src="https://images.unsplash.com/photo-1483721310020-03333e577078?q=80&w=1200&auto=format&fit=crop"
+          alt="Women Running"
+        >
+
+      </div>
+
+      <!-- TEXT -->
+
+      <div class="about-text">
+
+        <div class="section-badge">
+          About The Movement
+        </div>
+
+        <h2>
+          More Than A Race
+        </h2>
+
+        <p>
+          Imo Women Run is a statewide initiative focused on fitness,
+          empowerment, wellness and community connection among women
+          and girls across Imo State.
+        </p>
+
+        <!-- FEATURES -->
+
+        <div class="about-features">
+
+          <div class="feature-box">
+
+            <div class="feature-number">
+              01
+            </div>
+
+            <div>
+
+              <h3>
+                Health & Wellness
+              </h3>
+
+              <p>
+                Encouraging active lifestyles and healthy living.
+              </p>
+
+            </div>
+
+          </div>
+
+          <div class="feature-box">
+
+            <div class="feature-number">
+              02
+            </div>
+
+            <div>
+
+              <h3>
+                Community Building
+              </h3>
+
+              <p>
+                Bringing women together through positive experiences.
+              </p>
+
+            </div>
+
+          </div>
+
+          <div class="feature-box">
+
+            <div class="feature-number">
+              03
+            </div>
+
+            <div>
+
+              <h3>
+                Women Empowerment
+              </h3>
+
+              <p>
+                Creating opportunities, confidence and visibility.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ======================================= -->
+  <!-- SPONSORS SECTION -->
+  <!-- ======================================= -->
+
+  <section class="sponsors-section" id="sponsors">
+
+    <div class="section-header">
+
+      <span>
+        Sponsors & Partners
+      </span>
+
+      <h2>
+        Organizations Supporting Women
+      </h2>
+
+    </div>
+
+    <div class="sponsors-grid">
+
+      <div class="sponsor-box">
+        MTN
+      </div>
+
+      <div class="sponsor-box">
+        Access Bank
+      </div>
+
+      <div class="sponsor-box">
+        Zenith Bank
+      </div>
+
+      <div class="sponsor-box">
+        Coca-Cola
+      </div>
+
+      <div class="sponsor-box">
+        Imo State Government
+      </div>
+
+      <div class="sponsor-box">
+        Flourish Foundation
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ======================================= -->
+  <!-- FAQ -->
+  <!-- ======================================= -->
+
+  <section class="faq-section" id="faq">
+
+    <div class="section-header">
+
+      <span>
+        FAQ
+      </span>
+
+      <h2>
+        Frequently Asked Questions
+      </h2>
+
+    </div>
+
+    <div class="faq-container">
+
+      <div class="faq-box">
+
+        <h3>
+          Who can participate?
+        </h3>
+
+        <p>
+          Women and girls of different fitness levels can participate.
+        </p>
+
+      </div>
+
+      <div class="faq-box">
+
+        <h3>
+          Is registration free?
+        </h3>
+
+        <p>
+          Some categories are free while premium categories may include kits.
+        </p>
+
+      </div>
+
+      <div class="faq-box">
+
+        <h3>
+          Will participants receive kits?
+        </h3>
+
+        <p>
+          Registered participants may receive race kits and sponsor materials.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ======================================= -->
+  <!-- CTA SECTION -->
+  <!-- ======================================= -->
+
+  <section class="cta-section">
+
+    <div class="cta-content">
+
+      <h2>
+        Be Part Of The First Step
+      </h2>
+
+      <p>
+        Join a growing movement celebrating women,
+        fitness, wellness and empowerment in Imo State.
+      </p>
+
+      <a href="register.html" class="cta-btn">
+        Start Registration
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- ======================================= -->
+  <!-- FOOTER -->
+  <!-- ======================================= -->
+
+  <footer class="footer">
+
+    <div class="footer-container">
+
+      <div>
+
+        <h2>
+          Imo Women Run
+        </h2>
+
+        <p>
+          Powered by wellness, unity and women empowerment.
+        </p>
+
+      </div>
+
+      <div class="footer-contact">
+
+        <p>
+          info@imowomenrun.com
+        </p>
+
+        <p>
+          +234 XXX XXX XXXX
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+
 </body>
+
 </html>
