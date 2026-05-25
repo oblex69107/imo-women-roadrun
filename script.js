@@ -1,139 +1,293 @@
+/* ========================================= */
+/* QUICK FORM TO GOOGLE SHEET */
+/* ========================================= */
 
-/* =========================
-   COUNTDOWN TIMER
-========================= */
+/*
+=============================================
 
-const eventDate = new Date("June 20, 2026 07:00:00").getTime();
+IMPORTANT
 
-const countdown = setInterval(() => {
-  const now = new Date().getTime();
-  const distance = eventDate - now;
+Replace this URL below with your
+Google Apps Script Web App URL
 
-  if (distance < 0) {
+=============================================
+*/
+
+const GOOGLE_SCRIPT_URL =
+"https://script.google.com/macros/s/AKfycbw2aXyBSAnItuzCajM5FSHLh9qI7XOzSdD_Tvj8vi4KDoer6D_AcXeL0P22ozLBTN4IGA/exec";
+
+
+/* ========================================= */
+/* FORM SUBMISSION */
+/* ========================================= */
+
+const quickForm =
+document.getElementById("quickForm");
+
+
+quickForm.addEventListener("submit", async function(e){
+
+  e.preventDefault();
+
+  /* GET INPUT VALUES */
+
+  const fullName =
+  quickForm.querySelector('input[type="text"]').value;
+
+  const phone =
+  quickForm.querySelector('input[type="tel"]').value;
+
+  const email =
+  quickForm.querySelector('input[type="email"]').value;
+
+  const gender =
+  quickForm.querySelector('select').value;
+
+  /* BUTTON */
+
+  const submitBtn =
+  document.querySelector(".continue-btn");
+
+  submitBtn.innerHTML =
+  "Submitting...";
+
+  submitBtn.disabled = true;
+
+  /* FORM DATA */
+
+  const formData = {
+
+    fullName: fullName,
+
+    phone: phone,
+
+    email: email,
+
+    gender: gender,
+
+    date:
+    new Date().toLocaleString()
+
+  };
+
+  try{
+
+    /* SEND TO GOOGLE SHEET */
+
+    const response =
+    await fetch(GOOGLE_SCRIPT_URL,{
+
+      method:"POST",
+
+      mode:"no-cors",
+
+      headers:{
+        "Content-Type":"application/json"
+      },
+
+      body:JSON.stringify(formData)
+
+    });
+
+    /* SUCCESS MESSAGE */
+
+    submitBtn.innerHTML =
+    "Success ✓";
+
+    /* SMALL DELAY */
+
+    setTimeout(()=>{
+
+      /*
+      =======================================
+      REDIRECT TO FULL FORM PAGE
+      =======================================
+      */
+
+      window.location.href =
+      "register.html";
+
+    },1200);
+
+  }
+
+  catch(error){
+
+    console.log(error);
+
+    submitBtn.innerHTML =
+    "Try Again";
+
+    submitBtn.disabled = false;
+
+    alert(
+      "Something went wrong. Please try again."
+    );
+
+  }
+
+});
+
+
+/* ========================================= */
+/* COUNTDOWN TIMER */
+/* ========================================= */
+
+/*
+=============================================
+
+SET EVENT DATE HERE
+
+=============================================
+*/
+
+const eventDate =
+new Date("August 15, 2026 06:00:00").getTime();
+
+
+const countdown = setInterval(()=>{
+
+  const now =
+  new Date().getTime();
+
+  const distance =
+  eventDate - now;
+
+  /* TIME CALCULATIONS */
+
+  const days =
+  Math.floor(
+    distance / (1000 * 60 * 60 * 24)
+  );
+
+  const hours =
+  Math.floor(
+    (distance % (1000 * 60 * 60 * 24))
+    / (1000 * 60 * 60)
+  );
+
+  const minutes =
+  Math.floor(
+    (distance % (1000 * 60 * 60))
+    / (1000 * 60)
+  );
+
+  const seconds =
+  Math.floor(
+    (distance % (1000 * 60))
+    / 1000
+  );
+
+  /* DISPLAY */
+
+  document.getElementById("days").innerHTML =
+  days;
+
+  document.getElementById("hours").innerHTML =
+  hours;
+
+  document.getElementById("minutes").innerHTML =
+  minutes;
+
+  document.getElementById("seconds").innerHTML =
+  seconds;
+
+  /* EVENT STARTED */
+
+  if(distance < 0){
+
     clearInterval(countdown);
-    const timerBox = document.querySelector(".timer");
-    if (timerBox) timerBox.innerHTML = "<h3>Event Started 🎉</h3>";
-    return;
+
+    document.getElementById("days").innerHTML =
+    "00";
+
+    document.getElementById("hours").innerHTML =
+    "00";
+
+    document.getElementById("minutes").innerHTML =
+    "00";
+
+    document.getElementById("seconds").innerHTML =
+    "00";
+
   }
 
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+},1000);
 
-  const d = document.getElementById("days");
-  const h = document.getElementById("hours");
-  const m = document.getElementById("minutes");
-  const s = document.getElementById("seconds");
 
-  if (d && h && m && s) {
-    d.innerText = days;
-    h.innerText = hours;
-    m.innerText = minutes;
-    s.innerText = seconds;
+/* ========================================= */
+/* NAVBAR SCROLL EFFECT */
+/* ========================================= */
+
+window.addEventListener("scroll",()=>{
+
+  const navbar =
+  document.querySelector(".navbar");
+
+  if(window.scrollY > 50){
+
+    navbar.style.padding =
+    "18px 8%";
+
+    navbar.style.boxShadow =
+    "0 10px 30px rgba(0,0,0,0.08)";
+
   }
 
-}, 1000);
+  else{
+
+    navbar.style.padding =
+    "22px 8%";
+
+    navbar.style.boxShadow =
+    "none";
+
+  }
+
+});
 
 
-/* =========================
-   REGISTRATION FORM
-========================= */
+/* ========================================= */
+/* SIMPLE FADE-IN ANIMATION */
+/* ========================================= */
 
-const form = document.getElementById("regForm");
-const button = form ? form.querySelector("button") : null;
+const fadeElements =
+document.querySelectorAll(
+  ".stat-card, .faq-box, .sponsor-box, .feature-box"
+);
 
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzN6x6_s1vEKRr7nnOIs0D1bmrxgsEkvZ7mdoYiJAmNhgQ7pVcCqHDk3B1Y-XonFHeDIA/exec";
 
-function showMessage(msg, isError = false) {
-  const popup = document.createElement("div");
+const observer =
+new IntersectionObserver((entries)=>{
 
-  popup.innerText = msg;
+  entries.forEach((entry)=>{
 
-  popup.style.position = "fixed";
-  popup.style.top = "20px";
-  popup.style.left = "50%";
-  popup.style.transform = "translateX(-50%)";
-  popup.style.padding = "15px 25px";
-  popup.style.borderRadius = "10px";
-  popup.style.color = "white";
-  popup.style.fontWeight = "500";
-  popup.style.boxShadow = "0 10px 20px rgba(0,0,0,0.2)";
-  popup.style.background = isError ? "#e74c3c" : "#2ecc71";
-  popup.style.zIndex = "9999";
+    if(entry.isIntersecting){
 
-  document.body.appendChild(popup);
+      entry.target.style.opacity = "1";
 
-  setTimeout(() => popup.remove(), 3000);
-}
+      entry.target.style.transform =
+      "translateY(0px)";
 
-if (form) {
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-
-    const inputs = form.querySelectorAll("input");
-
-    const data = {
-      name: inputs[0].value.trim(),
-      email: inputs[1].value.trim(),
-      phone: inputs[2].value.trim(),
-      age: inputs[3].value.trim()
-    };
-
-    /* =========================
-       BASIC VALIDATION
-    ========================= */
-
-    if (!data.name || !data.email || !data.phone || !data.age) {
-      showMessage("Please fill all fields", true);
-      return;
     }
 
-    if (!data.email.includes("@")) {
-      showMessage("Enter a valid email", true);
-      return;
-    }
-
-    if (data.phone.length < 10) {
-      showMessage("Enter a valid phone number", true);
-      return;
-    }
-
-    if (data.age < 10 || data.age > 100) {
-      showMessage("Enter a valid age", true);
-      return;
-    }
-
-    /* =========================
-       LOADING STATE
-    ========================= */
-
-    if (button) {
-      button.disabled = true;
-      button.innerText = "Submitting...";
-    }
-
-    /* =========================
-       SEND TO GOOGLE SHEETS
-    ========================= */
-
-    try {
-      await fetch(SCRIPT_URL, {
-        method: "POST",
-        body: JSON.stringify(data)
-      });
-
-      showMessage("Registration successful 🎉");
-      form.reset();
-
-    } catch (error) {
-      showMessage("Submission failed. Try again.", true);
-    }
-
-    /* RESET BUTTON */
-    if (button) {
-      button.disabled = false;
-      button.innerText = "Submit";
-    }
   });
-}
+
+},{
+  threshold:0.2
+});
+
+
+fadeElements.forEach((element)=>{
+
+  element.style.opacity = "0";
+
+  element.style.transform =
+  "translateY(40px)";
+
+  element.style.transition =
+  "all 0.8s ease";
+
+  observer.observe(element);
+
+});
