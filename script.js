@@ -142,7 +142,7 @@ SET EVENT DATE HERE
 */
 
 const eventDate =
-new Date("August 15, 2026 06:00:00").getTime();
+new Date("December 19, 2026 00:00:00").getTime();
 
 
 const countdown = setInterval(()=>{
