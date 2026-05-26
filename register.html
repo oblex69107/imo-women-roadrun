@@ -25,17 +25,17 @@
     rel="stylesheet"
   >
 
-  <!-- CSS -->
+  <!-- REGISTER CSS -->
 
-  <link rel="stylesheet" href="style1.css">
+  <link rel="stylesheet" href="register.css">
 
 </head>
 
 <body>
 
-  <!-- ===================================== -->
+  <!-- ==================================== -->
   <!-- NAVBAR -->
-  <!-- ===================================== -->
+  <!-- ==================================== -->
 
   <header class="navbar">
 
@@ -57,69 +57,59 @@
 
   </header>
 
-  <!-- ===================================== -->
-  <!-- HERO SECTION -->
-  <!-- ===================================== -->
+  <!-- ==================================== -->
+  <!-- HERO -->
+  <!-- ==================================== -->
 
   <section class="register-hero">
 
-    <div class="register-overlay"></div>
+    <div class="hero-overlay"></div>
 
-    <div class="register-glow"></div>
+    <div class="hero-content">
 
-    <div class="register-container">
-
-      <div class="register-text">
-
-        <div class="hero-badge">
-          Official Registration Form
-        </div>
-
-        <h1>
-          Complete Your Registration
-        </h1>
-
-        <p>
-          Fill all required details carefully to complete your participation registration for the Imo Women Run event.
-        </p>
-
+      <div class="hero-badge">
+        Official Registration Portal
       </div>
+
+      <h1>
+        Complete Your Registration
+      </h1>
+
+      <p>
+        Kindly fill all required information carefully to participate in the Imo Women Run event.
+      </p>
 
     </div>
 
   </section>
 
-  <!-- ===================================== -->
-  <!-- FORM SECTION -->
-  <!-- ===================================== -->
+  <!-- ==================================== -->
+  <!-- REGISTRATION FORM -->
+  <!-- ==================================== -->
 
   <section class="registration-section">
 
     <div class="registration-card">
 
-      <form id="fullRegistrationForm">
+      <form id="registrationForm">
 
-        <!-- ===================================== -->
+        <!-- ==================================== -->
         <!-- SECTION 1 -->
-        <!-- ===================================== -->
+        <!-- ==================================== -->
 
         <div class="form-section">
 
           <div class="section-title">
 
-            <span>
-              01
-            </span>
+            <span>01</span>
 
             <h2>
-              Personal Information
+              Participant Information
             </h2>
 
           </div>
 
           <div class="form-grid">
-
-            <!-- FULL NAME -->
 
             <div class="input-group">
 
@@ -130,13 +120,11 @@
               <input
                 type="text"
                 name="fullName"
-                placeholder="Enter your full name"
+                placeholder="Enter full name"
                 required
               >
 
             </div>
-
-            <!-- GENDER -->
 
             <div class="input-group">
 
@@ -165,87 +153,6 @@
 
             </div>
 
-            <!-- PHONE -->
-
-            <div class="input-group">
-
-              <label>
-                Phone Number
-              </label>
-
-              <input
-                type="tel"
-                name="phone"
-                placeholder="0800 000 0000"
-                required
-              >
-
-            </div>
-
-            <!-- EMAIL -->
-
-            <div class="input-group">
-
-              <label>
-                Email Address
-              </label>
-
-              <input
-                type="email"
-                name="email"
-                placeholder="you@example.com"
-                required
-              >
-
-            </div>
-
-            <!-- AGE -->
-
-            <div class="input-group">
-
-              <label>
-                Age Range
-              </label>
-
-              <select
-                name="ageRange"
-                required
-              >
-
-                <option value="">
-                  Select Age Range
-                </option>
-
-                <option>
-                  Under 18
-                </option>
-
-                <option>
-                  18 - 25
-                </option>
-
-                <option>
-                  26 - 35
-                </option>
-
-                <option>
-                  36 - 45
-                </option>
-
-                <option>
-                  46 - 60
-                </option>
-
-                <option>
-                  60+
-                </option>
-
-              </select>
-
-            </div>
-
-            <!-- DOB -->
-
             <div class="input-group">
 
               <label>
@@ -259,31 +166,47 @@
 
             </div>
 
-          </div>
+            <div class="input-group">
 
-        </div>
+              <label>
+                Age
+              </label>
 
-        <!-- ===================================== -->
-        <!-- SECTION 2 -->
-        <!-- ===================================== -->
+              <input
+                type="number"
+                name="age"
+                placeholder="Enter age"
+              >
 
-        <div class="form-section">
+            </div>
 
-          <div class="section-title">
+            <div class="input-group">
 
-            <span>
-              02
-            </span>
+              <label>
+                Nationality
+              </label>
 
-            <h2>
-              Location Information
-            </h2>
+              <input
+                type="text"
+                name="nationality"
+                placeholder="Enter nationality"
+              >
 
-          </div>
+            </div>
 
-          <div class="form-grid">
+            <div class="input-group">
 
-            <!-- STATE -->
+              <label>
+                Occupation
+              </label>
+
+              <input
+                type="text"
+                name="occupation"
+                placeholder="Enter occupation"
+              >
+
+            </div>
 
             <div class="input-group">
 
@@ -294,12 +217,10 @@
               <input
                 type="text"
                 name="state"
-                placeholder="Enter your state"
+                placeholder="Enter state"
               >
 
             </div>
-
-            <!-- LGA -->
 
             <div class="input-group">
 
@@ -310,23 +231,85 @@
               <input
                 type="text"
                 name="lga"
-                placeholder="Enter your LGA"
+                placeholder="Enter LGA"
               >
 
             </div>
 
-            <!-- ADDRESS -->
+          </div>
+
+        </div>
+
+        <!-- ==================================== -->
+        <!-- SECTION 2 -->
+        <!-- ==================================== -->
+
+        <div class="form-section">
+
+          <div class="section-title">
+
+            <span>02</span>
+
+            <h2>
+              Contact Information
+            </h2>
+
+          </div>
+
+          <div class="form-grid">
+
+            <div class="input-group">
+
+              <label>
+                Phone Number
+              </label>
+
+              <input
+                type="tel"
+                name="phone"
+                placeholder="0800 000 0000"
+              >
+
+            </div>
+
+            <div class="input-group">
+
+              <label>
+                WhatsApp Number
+              </label>
+
+              <input
+                type="tel"
+                name="whatsapp"
+                placeholder="0800 000 0000"
+              >
+
+            </div>
 
             <div class="input-group full-width">
 
               <label>
-                Residential Address
+                Email Address
+              </label>
+
+              <input
+                type="email"
+                name="email"
+                placeholder="you@example.com"
+              >
+
+            </div>
+
+            <div class="input-group full-width">
+
+              <label>
+                Home Address
               </label>
 
               <textarea
                 name="address"
                 rows="4"
-                placeholder="Enter your address"
+                placeholder="Enter home address"
               ></textarea>
 
             </div>
@@ -335,40 +318,133 @@
 
         </div>
 
-        <!-- ===================================== -->
+        <!-- ==================================== -->
         <!-- SECTION 3 -->
-        <!-- ===================================== -->
+        <!-- ==================================== -->
 
         <div class="form-section">
 
           <div class="section-title">
 
-            <span>
-              03
-            </span>
+            <span>03</span>
 
             <h2>
-              Participation Details
+              Emergency Contact
             </h2>
 
           </div>
 
           <div class="form-grid">
 
-            <!-- CATEGORY -->
+            <div class="input-group">
+
+              <label>
+                Contact Name
+              </label>
+
+              <input
+                type="text"
+                name="emergencyName"
+              >
+
+            </div>
 
             <div class="input-group">
 
               <label>
-                Participation Category
+                Relationship
               </label>
 
-              <select
-                name="category"
-                required
+              <input
+                type="text"
+                name="relationship"
               >
 
-                <option value="">
+            </div>
+
+            <div class="input-group">
+
+              <label>
+                Phone Number
+              </label>
+
+              <input
+                type="tel"
+                name="emergencyPhone"
+              >
+
+            </div>
+
+            <div class="input-group">
+
+              <label>
+                Alternate Phone Number
+              </label>
+
+              <input
+                type="tel"
+                name="alternatePhone"
+              >
+
+            </div>
+
+            <div class="input-group">
+
+              <label>
+                State
+              </label>
+
+              <input
+                type="text"
+                name="emergencyState"
+              >
+
+            </div>
+
+            <div class="input-group">
+
+              <label>
+                Address
+              </label>
+
+              <input
+                type="text"
+                name="emergencyAddress"
+              >
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- ==================================== -->
+        <!-- SECTION 4 -->
+        <!-- ==================================== -->
+
+        <div class="form-section">
+
+          <div class="section-title">
+
+            <span>04</span>
+
+            <h2>
+              Run Participation Details
+            </h2>
+
+          </div>
+
+          <div class="form-grid">
+
+            <div class="input-group">
+
+              <label>
+                Race Category
+              </label>
+
+              <select name="raceCategory">
+
+                <option>
                   Select Category
                 </option>
 
@@ -384,15 +460,86 @@
                   10KM Run
                 </option>
 
+              </select>
+
+            </div>
+
+            <div class="input-group">
+
+              <label>
+                Participation Type
+              </label>
+
+              <select name="participationType">
+
                 <option>
-                  Corporate Team
+                  Select Type
+                </option>
+
+                <option>
+                  Individual
+                </option>
+
+                <option>
+                  Group
+                </option>
+
+                <option>
+                  Corporate
+                </option>
+                <option>
+                  School Team
+                </option>
+                <option>
+                  NGO Group
                 </option>
 
               </select>
 
             </div>
 
-            <!-- T SHIRT -->
+            <div class="input-group full-width">
+
+              <label>
+                Running Experience
+              </label>
+
+              <select name="runningExperiens">
+                <option>
+                  Select option
+                </option>
+                <option>
+                  Beginner
+                </option>
+                <option>Intermediate</option>
+                <option>
+                  Experienced runner
+                </option>
+              </select>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- ==================================== -->
+        <!-- SECTION 5 -->
+        <!-- ==================================== -->
+
+        <div class="form-section">
+
+          <div class="section-title">
+
+            <span>05</span>
+
+            <h2>
+              Kit Information
+            </h2>
+
+          </div>
+
+          <div class="form-grid">
 
             <div class="input-group">
 
@@ -400,32 +547,43 @@
                 T-Shirt Size
               </label>
 
-              <select
-                name="shirtSize"
-              >
+              <select name="shirtSize">
 
-                <option value="">
+                <option>
                   Select Size
                 </option>
 
+                <option>S</option>
+
+                <option>M</option>
+
+                <option>L</option>
+
+                <option>XL</option>
+
+                <option>XXL</option>
+
+              </select>
+
+            </div>
+
+            <div class="input-group">
+
+              <label>
+                Preferred Fit
+              </label>
+
+              <select name="fit">
+
                 <option>
-                  S
+                  Select Fit
                 </option>
 
                 <option>
-                  M
+                  Male cut
                 </option>
-
                 <option>
-                  L
-                </option>
-
-                <option>
-                  XL
-                </option>
-
-                <option>
-                  XXL
+                  Female cut
                 </option>
 
               </select>
@@ -436,17 +594,15 @@
 
         </div>
 
-        <!-- ===================================== -->
-        <!-- SECTION 4 -->
-        <!-- ===================================== -->
+        <!-- ==================================== -->
+        <!-- SECTION 6 -->
+        <!-- ==================================== -->
 
         <div class="form-section">
 
           <div class="section-title">
 
-            <span>
-              04
-            </span>
+            <span>06</span>
 
             <h2>
               Health Information
@@ -455,8 +611,6 @@
           </div>
 
           <div class="form-grid">
-
-            <!-- MEDICAL -->
 
             <div class="input-group full-width">
 
@@ -467,40 +621,46 @@
               <textarea
                 name="medical"
                 rows="4"
-                placeholder="State any medical conditions or allergies"
               ></textarea>
 
             </div>
 
-            <!-- EMERGENCY CONTACT -->
-
-            <div class="input-group">
+            <div class="input-group full-width">
 
               <label>
-                Emergency Contact Name
+                Allergies
               </label>
 
-              <input
-                type="text"
-                name="emergencyName"
-                placeholder="Emergency contact name"
-              >
+              <textarea
+                name="allergies"
+                rows="4"
+              ></textarea>
 
             </div>
 
-            <!-- EMERGENCY PHONE -->
-
-            <div class="input-group">
+            <div class="input-group full-width">
 
               <label>
-                Emergency Contact Number
+                Medications
               </label>
 
-              <input
-                type="tel"
-                name="emergencyPhone"
-                placeholder="0800 000 0000"
-              >
+              <textarea
+                name="medications"
+                rows="4"
+              ></textarea>
+
+            </div>
+
+            <div class="input-group full-width">
+
+              <label>
+                Physical Limitations
+              </label>
+
+              <textarea
+                name="limitations"
+                rows="4"
+              ></textarea>
 
             </div>
 
@@ -508,20 +668,18 @@
 
         </div>
 
-        <!-- ===================================== -->
-        <!-- SECTION 5 -->
-        <!-- ===================================== -->
+        <!-- ==================================== -->
+        <!-- SECTION 7 -->
+        <!-- ==================================== -->
 
         <div class="form-section">
 
           <div class="section-title">
 
-            <span>
-              05
-            </span>
+            <span>07</span>
 
             <h2>
-              Agreement
+              Liability Waiver
             </h2>
 
           </div>
@@ -530,13 +688,14 @@
 
             <input
               type="checkbox"
-              id="agree"
               required
             >
 
-            <label for="agree">
+            <label>
 
-              I confirm that all information provided is correct and I agree to participate responsibly in the Imo Women Run event.
+              I understand that participation in road running activities involves physical exertion and associated risks. 
+              I confirm that I am medically fit to participate in the Imo Women Run and agree that Fieldstones Sportainment shall not be held responsible for injuries, 
+              loss, accidents or damages arising from my participation.
 
             </label>
 
@@ -544,13 +703,351 @@
 
         </div>
 
-        <!-- ===================================== -->
-        <!-- SUBMIT -->
-        <!-- ===================================== -->
+        <!-- ==================================== -->
+        <!-- SECTION 8 -->
+        <!-- ==================================== -->
+
+        <div class="form-section">
+
+          <div class="section-title">
+
+            <span>08</span>
+
+            <h2>
+              Media Consent
+            </h2>
+
+          </div>
+
+          <div class="checkbox-group">
+
+            <input
+              type="checkbox"
+            >
+
+            <label>
+
+              I grant permission for photographs, 
+              videos and media content captured during the Imo Women Run to be used for promotional, 
+              publicity and documentation purposes by Fieldstones Sportainment.
+
+            </label>
+
+          </div>
+
+        </div>
+
+        <!-- ==================================== -->
+        <!-- SECTION 9 -->
+        <!-- ==================================== -->
+
+        <!-- ==================================== -->
+<!-- SECTION 9 -->
+<!-- ==================================== -->
+
+<div class="form-section">
+
+  <div class="section-title">
+
+    <span>09</span>
+
+    <h2>
+      Payment Information
+    </h2>
+
+  </div>
+
+  <!-- PAYMENT NOTICE -->
+
+  <div class="payment-info-box">
+
+    <h3>
+      Registration Fee
+    </h3>
+
+    <p>
+
+      Participants aged 18 years and above are required to pay a registration fee of
+      <strong>₦3,000</strong>.
+
+    </p>
+
+    <p>
+
+      This payment covers the official
+      <strong>Imo Women Run event shirt</strong>.
+
+    </p>
+
+    <p>
+
+      Participants below 18 years may register free of charge unless otherwise stated by the organisers.
+
+    </p>
+
+    <p>
+
+      After payment, kindly upload or submit your payment confirmation/reference where required.
+
+    </p>
+
+    <!-- IMPORTANT NOTES -->
+
+    <div class="important-note">
+
+      <h4>
+        Please Note:
+      </h4>
+
+      <ul>
+
+        <li>
+          Registration is only considered complete after payment confirmation.
+        </li>
+
+        <li>
+          Event shirts are subject to size availability.
+        </li>
+
+        <li>
+          Payments made are non-refundable except in cases determined by the organisers.
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+  <!-- PAYMENT METHOD -->
+
+  <div class="payment-method-box">
+
+    <h3>
+      Payment Method
+    </h3>
+
+    <p>
+
+      Make bank transfer to:
+
+    </p>
+
+    <div class="bank-details">
+
+      <div class="bank-item">
+
+        <span>
+          Bank Name
+        </span>
+
+        <strong>
+          TBD
+        </strong>
+
+      </div>
+
+      <div class="bank-item">
+
+        <span>
+          Account Name
+        </span>
+
+        <strong>
+          Fieldstones Sports & Entertainment Limited
+        </strong>
+
+      </div>
+
+      <div class="bank-item">
+
+        <span>
+          Account Number
+        </span>
+
+        <strong>
+          TBD
+        </strong>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- PAYMENT FORM -->
+
+  <div class="form-grid payment-grid">
+
+    <div class="input-group">
+
+      <label>
+        Name Used For Payment
+      </label>
+
+      <input
+        type="text"
+        name="paymentName"
+        placeholder="Enter payment name"
+      >
+
+    </div>
+
+    <div class="input-group">
+
+      <label>
+        Payment Reference
+      </label>
+
+      <input
+        type="text"
+        name="paymentReference"
+        placeholder="Enter payment reference"
+      >
+
+    </div>
+
+    <div class="input-group full-width">
+
+      <label>
+        Upload Payment Receipt
+      </label>
+
+      <input
+        type="file"
+        name="receipt"
+      >
+
+    </div>
+
+  </div>
+
+</div>
+        <!-- ==================================== -->
+        <!-- SECTION 10 -->
+        <!-- ==================================== -->
+
+        <div class="form-section">
+
+          <div class="section-title">
+
+            <span>10</span>
+
+            <h2>
+              Event Operations
+            </h2>
+
+          </div>
+
+          <div class="form-grid">
+
+            <div class="input-group full-width">
+
+              <label>
+                How Did You Hear About The Event?
+              </label>
+
+              <textarea
+                name="eventSource"
+                rows="4"
+              ></textarea>
+
+            </div>
+
+            <div class="checkbox-group full-width">
+
+              <input
+                type="checkbox"
+                id="volunteer"
+              >
+
+              <label for="volunteer">
+
+                I am interested in volunteering for the event.
+
+              </label>
+
+            </div>
+            <div class="checkbox-group full-width">
+
+              <input
+                type="checkbox"
+                id="volunteer"
+              >
+
+              <label for="volunteer">
+
+                Are you joining with a team?
+
+              </label>
+
+            </div>
+
+            <div class="checkbox-group full-width">
+
+              <input
+                type="checkbox"
+                id="futureEvents"
+              >
+
+              <label for="futureEvents">
+
+                I would like to receive updates about future events.
+
+              </label>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- ==================================== -->
+        <!-- SECTION 11 -->
+        <!-- ==================================== -->
+
+        <div class="form-section">
+
+          <div class="section-title">
+
+            <span>11</span>
+
+            <h2>
+              Participant Declaration
+            </h2>
+
+          </div>
+
+          <div class="checkbox-group">
+
+            <input
+              type="checkbox"
+              required
+            >
+
+            <label>
+
+              I confirm that all information provided in this registration form is true, correct and accurate to the best of my knowledge.
+
+I understand that the Fieldstones Sportainment (the organisers) shall not be held responsible for any issues, 
+communication failures, delivery problems, registration errors or inconveniences arising from incorrect, 
+incomplete or misleading information submitted by me.
+
+I also understand that submission of this form does not automatically guarantee final participation approval until payment and registration details have been reviewed and confirmed by the organisers.
+
+            </label>
+
+          </div>
+
+        </div>
+
+        <!-- ==================================== -->
+        <!-- SUBMIT BUTTON -->
+        <!-- ==================================== -->
 
         <button
           type="submit"
-          class="submit-registration-btn"
+          class="submit-btn"
         >
 
           Complete Registration
@@ -563,9 +1060,9 @@
 
   </section>
 
-  <!-- ===================================== -->
+  <!-- ==================================== -->
   <!-- FOOTER -->
-  <!-- ===================================== -->
+  <!-- ==================================== -->
 
   <footer class="footer">
 
@@ -578,19 +1075,15 @@
         </h2>
 
         <p>
-          Powered by wellness, unity and women empowerment.
+          Empowering women through wellness and unity.
         </p>
 
       </div>
 
-      <div class="footer-contact">
+      <div>
 
         <p>
           info@imowomenrun.com
-        </p>
-
-        <p>
-          +234 XXX XXX XXXX
         </p>
 
       </div>
@@ -598,11 +1091,7 @@
     </div>
 
   </footer>
-
-  <!-- JS -->
-
-  <script src="script.js"></script>
-
+<script src="register.js"></script>
 </body>
 
 </html>
