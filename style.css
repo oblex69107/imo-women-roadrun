@@ -149,7 +149,7 @@ section{
   min-height:100vh;
 
   background:
-  url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1600&auto=format&fit=crop')
+  url("Imo Women Run 2026 Art ADJUSTED.jpg.jpeg")
   center center/cover no-repeat;
 
   overflow:hidden;
@@ -172,9 +172,9 @@ section{
 
   background:
   linear-gradient(
-  to right,
-  rgba(0,0,0,0.82),
-  rgba(123,47,247,0.38)
+      to right,
+      rgba(0,0,0,0.35),
+      rgba(0,0,0,0.10)
   );
 
   z-index:1;
@@ -187,11 +187,11 @@ section{
 
   position:absolute;
 
-  width:500px;
-  height:500px;
+  width:350px;
+  height:350px;
 
   background:
-  rgba(255,46,136,0.18);
+  rgba(255,46,136,0.08);
 
   border-radius:50%;
 
@@ -208,11 +208,11 @@ section{
 
   position:absolute;
 
-  width:450px;
-  height:450px;
+  width:300px;
+  height:300px;
 
   background:
-  rgba(123,47,247,0.18);
+  rgba(123,47,247,0.08);
 
   border-radius:50%;
 
@@ -437,16 +437,32 @@ section{
   z-index:20;
 
   background:
-  rgba(255,255,255,0.95);
+  rgba(255,255,255,0.92);
 
   backdrop-filter:blur(20px);
+
+  -webkit-backdrop-filter:blur(20px);
 
   border-radius:36px;
 
   padding:45px;
 
+  border:
+  1px solid rgba(
+      255,
+      255,
+      255,
+      0.40
+  );
+
   box-shadow:
-  0 30px 70px rgba(0,0,0,0.28);
+  0 30px 80px
+  rgba(
+      0,
+      0,
+      0,
+      0.18
+  );
 
 }
 
@@ -545,7 +561,14 @@ section{
   border-color:#ff2e88;
 
   box-shadow:
-  0 0 0 5px rgba(255,46,136,0.08);
+  0 0 0 6px rgba(
+      255,
+      46,
+      136,
+      0.12
+  );
+
+  transform:translateY(-2px);
 
 }
 
@@ -1168,5 +1191,25 @@ section{
     font-size:2.5rem;
 
   }
+
+  .hero-section{
+
+  min-height:auto;
+
+  background-position:65% center;
+
+  padding-top:110px;
+
+  padding-bottom:50px;
+
+}
+
+.hero-form-card{
+
+  padding:30px;
+
+  border-radius:28px;
+
+}
 
 }
