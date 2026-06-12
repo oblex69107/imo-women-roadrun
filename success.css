@@ -1,0 +1,314 @@
+/* ========================================= */
+/* RESET */
+/* ========================================= */
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+body{
+
+    font-family:
+    'Inter',
+    sans-serif;
+
+    min-height:100vh;
+
+    background:
+    linear-gradient(
+        135deg,
+        #faf7ff,
+        #fff5fb
+    );
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:30px;
+
+}
+
+/* ========================================= */
+/* SUCCESS SECTION */
+/* ========================================= */
+
+.success-section{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+/* ========================================= */
+/* SUCCESS CARD */
+/* ========================================= */
+
+.success-card{
+
+    width:100%;
+
+    max-width:800px;
+
+    background:#ffffff;
+
+    border-radius:36px;
+
+    padding:60px;
+
+    text-align:center;
+
+    box-shadow:
+    0 25px 60px
+    rgba(
+        0,
+        0,
+        0,
+        0.08
+    );
+
+    border:
+    1px solid rgba(
+        123,
+        47,
+        247,
+        0.08
+    );
+
+}
+
+/* ========================================= */
+/* SUCCESS ICON */
+/* ========================================= */
+
+.success-icon{
+
+    width:110px;
+
+    height:110px;
+
+    margin:0 auto 30px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:3rem;
+
+    font-weight:800;
+
+    color:#ffffff;
+
+    background:
+    linear-gradient(
+        135deg,
+        #00c853,
+        #43a047
+    );
+
+    box-shadow:
+    0 15px 35px
+    rgba(
+        67,
+        160,
+        71,
+        0.3
+    );
+
+}
+
+/* ========================================= */
+/* TITLE */
+/* ========================================= */
+
+.success-card h1{
+
+    font-size:2.6rem;
+
+    font-weight:800;
+
+    margin-bottom:20px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #ff2e88,
+        #7b2ff7
+    );
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:
+    transparent;
+
+}
+
+/* ========================================= */
+/* TEXT */
+/* ========================================= */
+
+.main-message{
+
+    font-size:1.2rem;
+
+    color:#222222;
+
+    margin-bottom:20px;
+
+    line-height:1.8;
+
+}
+
+.sub-message{
+
+    color:#666666;
+
+    line-height:2;
+
+    margin-bottom:15px;
+
+    font-size:1rem;
+
+}
+
+/* ========================================= */
+/* BUTTONS */
+/* ========================================= */
+
+.action-buttons{
+
+    margin-top:40px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+/* CHAT BUTTON */
+
+.chat-btn{
+
+    text-decoration:none;
+
+    padding:16px 36px;
+
+    border-radius:50px;
+
+    color:white;
+
+    font-weight:700;
+
+    background:
+    linear-gradient(
+        135deg,
+        #25D366,
+        #128C7E
+    );
+
+    transition:.3s ease;
+
+}
+
+.chat-btn:hover{
+
+    transform:
+    translateY(-3px);
+
+}
+
+/* HOME BUTTON */
+
+.home-btn{
+
+    text-decoration:none;
+
+    padding:16px 36px;
+
+    border-radius:50px;
+
+    color:white;
+
+    font-weight:700;
+
+    background:
+    linear-gradient(
+        135deg,
+        #ff2e88,
+        #7b2ff7
+    );
+
+    transition:.3s ease;
+
+}
+
+.home-btn:hover{
+
+    transform:
+    translateY(-3px);
+
+}
+
+/* ========================================= */
+/* MOBILE */
+/* ========================================= */
+
+@media(max-width:768px){
+
+    .success-card{
+
+        padding:40px 25px;
+
+    }
+
+    .success-card h1{
+
+        font-size:2rem;
+
+    }
+
+    .success-icon{
+
+        width:90px;
+
+        height:90px;
+
+        font-size:2.5rem;
+
+    }
+
+    .action-buttons{
+
+        flex-direction:column;
+
+    }
+
+    .chat-btn,
+    .home-btn{
+
+        width:100%;
+
+        text-align:center;
+
+    }
+
+}
