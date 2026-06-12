@@ -1,216 +1,177 @@
 /* ========================================= */
-/* QUICK FORM TO GOOGLE SHEET */
-/* ========================================= */
-
-/*
-=============================================
-
-IMPORTANT
-
-Replace this URL below with your
-Google Apps Script Web App URL
-
-=============================================
-*/
-
-const GOOGLE_SCRIPT_URL =
-"https://script.google.com/macros/s/AKfycbw2aXyBSAnItuzCajM5FSHLh9qI7XOzSdD_Tvj8vi4KDoer6D_AcXeL0P22ozLBTN4IGA/exec";
-
-
-/* ========================================= */
-/* FORM SUBMISSION */
+/* QUICK FORM TO REGISTER PAGE */
 /* ========================================= */
 
 const quickForm =
 document.getElementById("quickForm");
 
+if(quickForm){
 
-quickForm.addEventListener("submit", async function(e){
+    quickForm.addEventListener(
+        "submit",
+        function(e){
 
-  e.preventDefault();
+            e.preventDefault();
 
-  /* GET INPUT VALUES */
+            const fullName =
+            quickForm.querySelector(
+                'input[type="text"]'
+            ).value.trim();
 
-  const fullName =
-  quickForm.querySelector('input[type="text"]').value;
+            const phone =
+            quickForm.querySelector(
+                'input[type="tel"]'
+            ).value.trim();
 
-  const phone =
-  quickForm.querySelector('input[type="tel"]').value;
+            const email =
+            quickForm.querySelector(
+                'input[type="email"]'
+            ).value.trim();
 
-  const email =
-  quickForm.querySelector('input[type="email"]').value;
+            const gender =
+            quickForm.querySelector(
+                'select'
+            ).value;
 
-  const gender =
-  quickForm.querySelector('select').value;
+            /* Validation */
 
-  /* BUTTON */
+            if(
+                !fullName ||
+                !phone ||
+                !email ||
+                !gender
+            ){
 
-  const submitBtn =
-  document.querySelector(".continue-btn");
+                alert(
+                    "Please complete all fields before continuing."
+                );
 
-  submitBtn.innerHTML =
-  "Submitting...";
+                return;
 
-  submitBtn.disabled = true;
+            }
 
-  /* FORM DATA */
+            /* Store Data */
 
-  const formData = {
+            const starterData = {
 
-    fullName: fullName,
+                fullName: fullName,
 
-    phone: phone,
+                phone: phone,
 
-    email: email,
+                email: email,
 
-    gender: gender,
+                gender: gender
 
-    date:
-    new Date().toLocaleString()
+            };
 
-  };
+            localStorage.setItem(
+                "starterRegistration",
+                JSON.stringify(
+                    starterData
+                )
+            );
 
-  try{
+            /* Instant Redirect */
 
-    /* SEND TO GOOGLE SHEET */
+window.location.href =
+"register.html";
 
-    const response =
-    await fetch(GOOGLE_SCRIPT_URL,{
-
-      method:"POST",
-
-      mode:"no-cors",
-
-      headers:{
-        "Content-Type":"application/json"
-      },
-
-      body:JSON.stringify(formData)
-
-    });
-
-    /* SUCCESS MESSAGE */
-
-    submitBtn.innerHTML =
-    "Success ✓";
-
-    /* SMALL DELAY */
-
-    setTimeout(()=>{
-
-      /*
-      =======================================
-      REDIRECT TO FULL FORM PAGE
-      =======================================
-      */
-
-      window.location.href =
-      "register.html";
-
-    },1200);
-
-  }
-
-  catch(error){
-
-    console.log(error);
-
-    submitBtn.innerHTML =
-    "Try Again";
-
-    submitBtn.disabled = false;
-
-    alert(
-      "Something went wrong. Please try again."
+        }
     );
 
-  }
-
-});
+}
 
 
 /* ========================================= */
 /* COUNTDOWN TIMER */
 /* ========================================= */
 
-/*
-=============================================
-
-SET EVENT DATE HERE
-
-=============================================
-*/
-
 const eventDate =
-new Date("December 19, 2026 00:00:00").getTime();
+new Date(
+    "December 19, 2026 00:00:00"
+).getTime();
 
+const countdown =
+setInterval(()=>{
 
-const countdown = setInterval(()=>{
+    const now =
+    new Date().getTime();
 
-  const now =
-  new Date().getTime();
+    const distance =
+    eventDate - now;
 
-  const distance =
-  eventDate - now;
+    const days =
+    Math.floor(
+        distance /
+        (1000 * 60 * 60 * 24)
+    );
 
-  /* TIME CALCULATIONS */
+    const hours =
+    Math.floor(
+        (
+            distance %
+            (1000 * 60 * 60 * 24)
+        ) /
+        (1000 * 60 * 60)
+    );
 
-  const days =
-  Math.floor(
-    distance / (1000 * 60 * 60 * 24)
-  );
+    const minutes =
+    Math.floor(
+        (
+            distance %
+            (1000 * 60 * 60)
+        ) /
+        (1000 * 60)
+    );
 
-  const hours =
-  Math.floor(
-    (distance % (1000 * 60 * 60 * 24))
-    / (1000 * 60 * 60)
-  );
+    const seconds =
+    Math.floor(
+        (
+            distance %
+            (1000 * 60)
+        ) /
+        1000
+    );
 
-  const minutes =
-  Math.floor(
-    (distance % (1000 * 60 * 60))
-    / (1000 * 60)
-  );
+    document.getElementById(
+        "days"
+    ).innerHTML = days;
 
-  const seconds =
-  Math.floor(
-    (distance % (1000 * 60))
-    / 1000
-  );
+    document.getElementById(
+        "hours"
+    ).innerHTML = hours;
 
-  /* DISPLAY */
+    document.getElementById(
+        "minutes"
+    ).innerHTML = minutes;
 
-  document.getElementById("days").innerHTML =
-  days;
+    document.getElementById(
+        "seconds"
+    ).innerHTML = seconds;
 
-  document.getElementById("hours").innerHTML =
-  hours;
+    if(distance < 0){
 
-  document.getElementById("minutes").innerHTML =
-  minutes;
+        clearInterval(
+            countdown
+        );
 
-  document.getElementById("seconds").innerHTML =
-  seconds;
+        document.getElementById(
+            "days"
+        ).innerHTML = "00";
 
-  /* EVENT STARTED */
+        document.getElementById(
+            "hours"
+        ).innerHTML = "00";
 
-  if(distance < 0){
+        document.getElementById(
+            "minutes"
+        ).innerHTML = "00";
 
-    clearInterval(countdown);
+        document.getElementById(
+            "seconds"
+        ).innerHTML = "00";
 
-    document.getElementById("days").innerHTML =
-    "00";
-
-    document.getElementById("hours").innerHTML =
-    "00";
-
-    document.getElementById("minutes").innerHTML =
-    "00";
-
-    document.getElementById("seconds").innerHTML =
-    "00";
-
-  }
+    }
 
 },1000);
 
@@ -219,75 +180,102 @@ const countdown = setInterval(()=>{
 /* NAVBAR SCROLL EFFECT */
 /* ========================================= */
 
-window.addEventListener("scroll",()=>{
+window.addEventListener(
+    "scroll",
+    ()=>{
 
-  const navbar =
-  document.querySelector(".navbar");
+        const navbar =
+        document.querySelector(
+            ".navbar"
+        );
 
-  if(window.scrollY > 50){
+        if(
+            window.scrollY > 50
+        ){
 
-    navbar.style.padding =
-    "18px 8%";
+            navbar.style.padding =
+            "18px 8%";
 
-    navbar.style.boxShadow =
-    "0 10px 30px rgba(0,0,0,0.08)";
+            navbar.style.boxShadow =
+            "0 10px 30px rgba(0,0,0,0.08)";
 
-  }
+        }
 
-  else{
+        else{
 
-    navbar.style.padding =
-    "22px 8%";
+            navbar.style.padding =
+            "22px 8%";
 
-    navbar.style.boxShadow =
-    "none";
+            navbar.style.boxShadow =
+            "none";
 
-  }
+        }
 
-});
+    }
+);
 
 
 /* ========================================= */
-/* SIMPLE FADE-IN ANIMATION */
+/* FADE IN ANIMATION */
 /* ========================================= */
 
 const fadeElements =
 document.querySelectorAll(
-  ".stat-card, .faq-box, .sponsor-box, .feature-box"
+
+    ".stat-card, .faq-box, .sponsor-box, .feature-box"
+
 );
 
-
 const observer =
-new IntersectionObserver((entries)=>{
+new IntersectionObserver(
 
-  entries.forEach((entry)=>{
+    (entries)=>{
 
-    if(entry.isIntersecting){
+        entries.forEach(
+            (entry)=>{
 
-      entry.target.style.opacity = "1";
+                if(
+                    entry.isIntersecting
+                ){
 
-      entry.target.style.transform =
-      "translateY(0px)";
+                    entry.target.style.opacity =
+                    "1";
+
+                    entry.target.style.transform =
+                    "translateY(0px)";
+
+                }
+
+            }
+        );
+
+    },
+
+    {
+
+        threshold:0.2
 
     }
 
-  });
+);
 
-},{
-  threshold:0.2
-});
+fadeElements.forEach(
 
+    (element)=>{
 
-fadeElements.forEach((element)=>{
+        element.style.opacity =
+        "0";
 
-  element.style.opacity = "0";
+        element.style.transform =
+        "translateY(40px)";
 
-  element.style.transform =
-  "translateY(40px)";
+        element.style.transition =
+        "all 0.8s ease";
 
-  element.style.transition =
-  "all 0.8s ease";
+        observer.observe(
+            element
+        );
 
-  observer.observe(element);
+    }
 
-});
+);
