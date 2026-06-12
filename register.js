@@ -8,169 +8,106 @@ document.getElementById(
 
 form.addEventListener(
   "submit",
-  async (e) => {
+  function(e){
 
     e.preventDefault();
-
-    const submitBtn =
-    document.querySelector(
-      ".submit-btn"
-    );
-
-    submitBtn.innerHTML =
-    "Submitting...";
-
-    submitBtn.disabled = true;
 
     const formData =
     new FormData(form);
 
-    const data = {
+    const data =
+    Object.fromEntries(
+      formData.entries()
+    );
 
-      fullName:
-      formData.get("fullName"),
-
-      gender:
-      formData.get("gender"),
-
-      dob:
-      formData.get("dob"),
-
-      age:
-      formData.get("age"),
-
-      nationality:
-      formData.get("nationality"),
-
-      occupation:
-      formData.get("occupation"),
-
-      state:
-      formData.get("state"),
-
-      lga:
-      formData.get("lga"),
-
-      phone:
-      formData.get("phone"),
-
-      whatsapp:
-      formData.get("whatsapp"),
-
-      email:
-      formData.get("email"),
-
-      address:
-      formData.get("address"),
-
-      emergencyName:
-      formData.get("emergencyName"),
-
-      relationship:
-      formData.get("relationship"),
-
-      emergencyPhone:
-      formData.get("emergencyPhone"),
-
-      alternatePhone:
-      formData.get("alternatePhone"),
-
-      emergencyState:
-      formData.get("emergencyState"),
-
-      emergencyAddress:
-      formData.get("emergencyAddress"),
-
-      raceCategory:
-      formData.get("raceCategory"),
-
-      participationType:
-      formData.get("participationType"),
-
-      experience:
-      formData.get("experience"),
-
-      shirtSize:
-      formData.get("shirtSize"),
-
-      fit:
-      formData.get("fit"),
-
-      medical:
-      formData.get("medical"),
-
-      allergies:
-      formData.get("allergies"),
-
-      medications:
-      formData.get("medications"),
-
-      limitations:
-      formData.get("limitations"),
-
-      paymentName:
-      formData.get("paymentName"),
-
-      paymentReference:
-      formData.get("paymentReference"),
-
-      eventSource:
-      formData.get("eventSource"),
-
-      volunteer:
-      document.getElementById(
-        "volunteer"
-      ).checked
+    data.volunteer =
+      document.getElementById("volunteer")?.checked
       ? "Yes"
-      : "No",
+      : "No";
 
-      futureEvents:
-      document.getElementById(
-        "futureEvents"
-      ).checked
+    data.futureEvents =
+      document.getElementById("futureEvents")?.checked
       ? "Yes"
-      : "No"
+      : "No";
 
-    };
+    localStorage.setItem(
+      "registrationData",
+      JSON.stringify(data)
+    );
 
-    try {
+    window.location.href =
+    "review.html";
 
-      const response =
-      await fetch(scriptURL, {
+});
+/* MEDICAL CONDITION */
 
-        method: "POST",
+document
+.getElementById("medicalCondition")
+.addEventListener("change", function(){
 
-        body:
-        JSON.stringify(data)
+  document
+  .getElementById("medicalConditionDetails")
+  .style.display =
+  this.value === "Yes"
+  ? "flex"
+  : "none";
 
-      });
+});
 
-      const result =
-      await response.json();
+document
+.getElementById("conditionType")
+.addEventListener("change", function(){
 
-      if(result.result === "success"){
+  document
+  .getElementById("otherConditionBox")
+  .style.display =
+  this.value === "Others"
+  ? "flex"
+  : "none";
 
-        alert(
-          "Registration submitted successfully!"
-        );
+});
 
-        form.reset();
+/* ALLERGIES */
 
-      }
+document
+.getElementById("allergyStatus")
+.addEventListener("change", function(){
 
-    } catch(error){
+  document
+  .getElementById("allergyDetails")
+  .style.display =
+  this.value === "Yes"
+  ? "flex"
+  : "none";
 
-      alert(
-        "Something went wrong."
-      );
+});
 
-      console.error(error);
+/* MEDICATION */
 
-    }
+document
+.getElementById("medicationStatus")
+.addEventListener("change", function(){
 
-    submitBtn.innerHTML =
-    "Complete Registration";
+  document
+  .getElementById("medicationDetails")
+  .style.display =
+  this.value === "Yes"
+  ? "flex"
+  : "none";
 
-    submitBtn.disabled = false;
+});
+
+/* LIMITATIONS */
+
+document
+.getElementById("limitationStatus")
+.addEventListener("change", function(){
+
+  document
+  .getElementById("limitationDetails")
+  .style.display =
+  this.value === "Yes"
+  ? "flex"
+  : "none";
 
 });
