@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Review Registration
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="review.css"
+    >
+
+</head>
+
+<body>
+
+    <section class="review-section">
+
+        <div class="review-card">
+
+            <div class="review-header">
+
+                <h1>
+                    Review Your Registration
+                </h1>
+
+                <p>
+
+                    Please review your information carefully before
+                    confirming your registration.
+
+                </p>
+
+            </div>
+
+            <div id="reviewContent">
+
+            </div>
+
+            <div class="review-actions">
+
+                <button
+                    class="edit-btn"
+                    onclick="goBack()"
+                >
+                    Edit Information
+                </button>
+
+                <button
+                    class="confirm-btn"
+                    onclick="confirmSubmission()"
+                >
+                    Confirm Submission
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <script src="review.js"></script>
+
+</body>
+
+</html>
