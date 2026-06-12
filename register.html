@@ -67,17 +67,17 @@
 
     <div class="hero-content">
 
-      <div class="hero-badge">
+      <!--<div class="hero-badge">
         Official Registration Portal
-      </div>
+      </div>-->
 
-      <h1>
+      <!--<h1>
         Complete Your Registration
-      </h1>
+      </h1>-->
 
-      <p>
+      <!--<p>
         Kindly fill all required information carefully to participate in the Imo Women Run event.
-      </p>
+      </p>-->
 
     </div>
 
@@ -391,7 +391,7 @@
             <div class="input-group">
 
               <label>
-                State
+                State of Residence
               </label>
 
               <input
@@ -442,25 +442,36 @@
                 Race Category
               </label>
 
-              <select name="raceCategory">
+            
 
-                <option>
-                  Select Category
-                </option>
+                <select name="raceCategory" required>
 
-                <option>
-                  5KM Walk
-                </option>
+  <option value="">
+    Select Race Category
+  </option>
 
-                <option>
-                  5KM Run
-                </option>
+  <option value="3KM - Fun Walk/Run">
+    3KM - Fun Walk/Run
+  </option>
 
-                <option>
-                  10KM Run
-                </option>
+  <option value="5KM - Community Run">
+    5KM - Community Run
+  </option>
 
-              </select>
+  <option value="10KM - Fitness Run">
+    10KM - Fitness Run
+  </option>
+
+  <option value="15KM - Endurance Run">
+    15KM - Endurance Run
+  </option>
+
+  <option value="18KM - Ultimate Run">
+    18KM - Ultimate Run
+  </option>
+
+</select>
+
 
             </div>
 
@@ -470,54 +481,59 @@
                 Participation Type
               </label>
 
-              <select name="participationType">
+              <select name="participationType" required>
 
-                <option>
-                  Select Type
-                </option>
+  <option value="">
+    Select Participation Type
+  </option>
 
-                <option>
-                  Individual
-                </option>
+  <option value="Individual">
+    Individual
+  </option>
 
-                <option>
-                  Group
-                </option>
+  <option value="Corporate Team">
+    Corporate Team
+  </option>
 
-                <option>
-                  Corporate
-                </option>
-                <option>
-                  School Team
-                </option>
-                <option>
-                  NGO Group
-                </option>
+  <option value="School Team">
+    School Team
+  </option>
 
-              </select>
+  <option value="Group">
+    Group
+  </option>
+
+</select>
 
             </div>
 
-            <div class="input-group full-width">
+            <div class="input-group">
 
-              <label>
-                Running Experience
-              </label>
+  <label>
+    Running Experience
+  </label>
 
-              <select name="runningExperiens">
-                <option>
-                  Select option
-                </option>
-                <option>
-                  Beginner
-                </option>
-                <option>Intermediate</option>
-                <option>
-                  Experienced runner
-                </option>
-              </select>
+  <select name="experience" required>
 
-            </div>
+    <option value="">
+      Select Experience Level
+    </option>
+
+    <option value="Beginner">
+      Beginner
+    </option>
+
+    <option value="Intermediate">
+      Intermediate
+    </option>
+
+    <option value="Experienced Runner">
+      Experienced Runner
+    </option>
+
+  </select>
+
+</div>
 
           </div>
 
@@ -595,113 +611,323 @@
         </div>
 
         <!-- ==================================== -->
-        <!-- SECTION 6 -->
-        <!-- ==================================== -->
+<!-- SECTION 06 -->
+<!-- ==================================== -->
 
-        <div class="form-section">
+<div class="form-section">
 
-          <div class="section-title">
+    <div class="section-title">
 
-            <span>06</span>
+        <span>06</span>
 
-            <h2>
-              Health Information
-            </h2>
+        <h2>
+            Health & Medical Information
+        </h2>
 
-          </div>
+    </div>
 
-          <div class="form-grid">
+    <div class="form-grid">
 
-            <div class="input-group full-width">
+        <!-- Medical Condition -->
 
-              <label>
-                Medical Conditions
-              </label>
+        <div class="input-group full-width">
 
-              <textarea
-                name="medical"
-                rows="4"
-              ></textarea>
+            <label>
+                Do you have any medical condition?
+            </label>
 
-            </div>
+            <select id="medicalCondition" name="medicalCondition">
 
-            <div class="input-group full-width">
+                <option value="">
+                    Select Option
+                </option>
 
-              <label>
-                Allergies
-              </label>
+                <option value="No">
+                    No
+                </option>
 
-              <textarea
-                name="allergies"
-                rows="4"
-              ></textarea>
+                <option value="Yes">
+                    Yes
+                </option>
 
-            </div>
-
-            <div class="input-group full-width">
-
-              <label>
-                Medications
-              </label>
-
-              <textarea
-                name="medications"
-                rows="4"
-              ></textarea>
-
-            </div>
-
-            <div class="input-group full-width">
-
-              <label>
-                Physical Limitations
-              </label>
-
-              <textarea
-                name="limitations"
-                rows="4"
-              ></textarea>
-
-            </div>
-
-          </div>
+            </select>
 
         </div>
+
+        <div
+            class="input-group full-width hidden-field health-followup"
+            id="medicalConditionDetails"
+        >
+
+            <label>
+                Medical Condition
+            </label>
+
+            <select id="conditionType" name="conditionType">
+
+                <option value="">
+                    Select Condition
+                </option>
+
+                <option value="Asthma">
+                    Asthma
+                </option>
+
+                <option value="Hypertension">
+                    Hypertension
+                </option>
+
+                <option value="Diabetes">
+                    Diabetes
+                </option>
+
+                <option value="Rheumatism">
+                    Rheumatism
+                </option>
+
+                <option value="Others">
+                    Others
+                </option>
+
+            </select>
+
+        </div>
+
+        <div
+            class="input-group full-width hidden-field health-followup"
+            id="otherConditionBox"
+        >
+
+            <label>
+                Describe Condition
+            </label>
+
+            <input
+                type="text"
+                name="otherCondition"
+                placeholder="Describe your condition"
+            >
+
+        </div>
+
+        <!-- Allergies -->
+
+        <div class="input-group full-width">
+
+            <label>
+                Do you have any allergies?
+            </label>
+
+            <select id="allergyStatus" name="allergyStatus">
+
+                <option value="">
+                    Select Option
+                </option>
+
+                <option value="No">
+                    No
+                </option>
+
+                <option value="Yes">
+                    Yes
+                </option>
+
+            </select>
+
+        </div>
+
+        <div
+            class="input-group full-width hidden-field health-followup"
+            id="allergyDetails"
+        >
+
+            <label>
+                Allergy Details
+            </label>
+
+            <input
+                type="text"
+                name="allergyDescription"
+                placeholder="Describe allergy"
+            >
+
+        </div>
+
+        <!-- Medications -->
+
+        <div class="input-group full-width">
+
+            <label>
+                Are you currently taking any medications?
+            </label>
+
+            <select id="medicationStatus" name="medicationStatus">
+
+                <option value="">
+                    Select Option
+                </option>
+
+                <option value="No">
+                    No
+                </option>
+
+                <option value="Yes">
+                    Yes
+                </option>
+
+            </select>
+
+        </div>
+
+        <div
+            class="input-group full-width hidden-field health-followup"
+            id="medicationDetails"
+        >
+
+            <label>
+                Medication Details
+            </label>
+
+            <input
+                type="text"
+                name="medicationDescription"
+                placeholder="List medication(s)"
+            >
+
+        </div>
+
+        <!-- Physical Limitations -->
+
+        <div class="input-group full-width">
+
+            <label>
+                Do you have any physical limitations?
+            </label>
+
+            <select id="limitationStatus" name="limitationStatus">
+
+                <option value="">
+                    Select Option
+                </option>
+
+                <option value="No">
+                    No
+                </option>
+
+                <option value="Yes">
+                    Yes
+                </option>
+
+            </select>
+
+        </div>
+
+        <div
+            class="input-group full-width hidden-field health-followup"
+            id="limitationDetails"
+        >
+
+            <label>
+                Physical Limitation Details
+            </label>
+
+            <input
+                type="text"
+                name="limitationDescription"
+                placeholder="Describe limitation"
+            >
+
+        </div>
+
+    </div>
+
+</div>
 
         <!-- ==================================== -->
         <!-- SECTION 7 -->
         <!-- ==================================== -->
 
-        <div class="form-section">
+        <!-- ==================================== -->
+<!-- SECTION 07 -->
+<!-- ==================================== -->
 
-          <div class="section-title">
+<div class="form-section">
 
-            <span>07</span>
+  <div class="section-title">
 
-            <h2>
-              Liability Waiver
-            </h2>
+    <span>07</span>
 
-          </div>
+    <h2>
+      Liability Waiver
+    </h2>
 
-          <div class="checkbox-group">
+  </div>
 
-            <input
-              type="checkbox"
-              required
-            >
+  <div class="waiver-box">
 
-            <label>
+    <p>
 
-              I understand that participation in road running activities involves physical exertion and associated risks. 
-              I confirm that I am medically fit to participate in the Imo Women Run and agree that Fieldstones Sportainment shall not be held responsible for injuries, 
-              loss, accidents or damages arising from my participation.
+      I understand that participation in road running activities involves physical
+      exertion and associated risks.
 
-            </label>
+      I confirm that I am medically fit to participate in the Imo Women Run and
+      agree that Fieldstones Sportainment shall not be held responsible for injuries,
+      loss, accidents or damages arising from my participation.
 
-          </div>
+    </p>
 
-        </div>
+  </div>
+
+  <div class="checkbox-group">
+
+    <input
+      type="checkbox"
+      id="waiverAgreement"
+      required
+    >
+
+    <label for="waiverAgreement">
+
+      I have read and agree to the liability waiver.
+
+    </label>
+
+  </div>
+
+  <div class="form-grid">
+
+    <div class="input-group">
+
+      <label>
+        Date
+      </label>
+
+      <input
+        type="date"
+        name="waiverDate"
+        required
+      >
+
+    </div>
+
+    <div class="input-group">
+
+      <label>
+        Digital Signature / Full Name
+      </label>
+
+      <input
+        type="text"
+        name="digitalSignature"
+        placeholder="Type your full name"
+        required
+      >
+
+    </div>
+
+  </div>
+
+</div>
 
         <!-- ==================================== -->
         <!-- SECTION 8 -->
@@ -1006,40 +1232,81 @@
         <!-- SECTION 11 -->
         <!-- ==================================== -->
 
-        <div class="form-section">
+        <!-- ==================================== -->
+<!-- SECTION 10 -->
+<!-- ==================================== -->
 
-          <div class="section-title">
+<div class="form-section">
 
-            <span>11</span>
+  <div class="section-title">
 
-            <h2>
-              Participant Declaration
-            </h2>
+    <span>10</span>
 
-          </div>
+    <h2>
+      Participant Declaration
+    </h2>
 
-          <div class="checkbox-group">
+  </div>
 
-            <input
-              type="checkbox"
-              required
-            >
+  <div class="declaration-container">
 
-            <label>
+    <div class="declaration-item">
 
-              I confirm that all information provided in this registration form is true, correct and accurate to the best of my knowledge.
+      <input
+        type="checkbox"
+        id="declaration1"
+        required
+      >
 
-I understand that the Fieldstones Sportainment (the organisers) shall not be held responsible for any issues, 
-communication failures, delivery problems, registration errors or inconveniences arising from incorrect, 
-incomplete or misleading information submitted by me.
+      <label for="declaration1">
 
-I also understand that submission of this form does not automatically guarantee final participation approval until payment and registration details have been reviewed and confirmed by the organisers.
+        I confirm that all information provided in this registration form is true,
+        correct and accurate to the best of my knowledge.
 
-            </label>
+      </label>
 
-          </div>
+    </div>
 
-        </div>
+    <div class="declaration-item">
+
+      <input
+        type="checkbox"
+        id="declaration2"
+        required
+      >
+
+      <label for="declaration2">
+
+        I understand that Fieldstones Sportainment (the organisers)
+        shall not be held responsible for any issues, communication failures,
+        delivery problems, registration errors or inconveniences arising from
+        incorrect, incomplete or misleading information submitted by me.
+
+      </label>
+
+    </div>
+
+    <div class="declaration-item">
+
+      <input
+        type="checkbox"
+        id="declaration3"
+        required
+      >
+
+      <label for="declaration3">
+
+        I understand that submission of this form does not automatically guarantee
+        final participation approval until payment and registration details have
+        been reviewed and confirmed by the organisers.
+
+      </label>
+
+    </div>
+
+  </div>
+
+</div>
 
         <!-- ==================================== -->
         <!-- SUBMIT BUTTON -->
