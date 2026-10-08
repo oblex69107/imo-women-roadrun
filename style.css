@@ -42,6 +42,7 @@ section{
 
 }
 
+
 /* ========================================= */
 /* NAVBAR */
 /* ========================================= */
@@ -119,10 +120,10 @@ section{
 
   background:
   linear-gradient(
-  135deg,
-  #ff2e88,
-  #d633ff,
-  #7b2ff7
+    135deg,
+    #ff2e88,
+    #d633ff,
+    #7b2ff7
   );
 
   box-shadow:
@@ -137,6 +138,7 @@ section{
   transform:translateY(-4px);
 
 }
+
 
 /* ========================================= */
 /* HERO SECTION */
@@ -162,7 +164,10 @@ section{
 
 }
 
+
+/* ========================================= */
 /* DARK OVERLAY */
+/* ========================================= */
 
 .hero-overlay{
 
@@ -172,16 +177,19 @@ section{
 
   background:
   linear-gradient(
-      to right,
-      rgba(0,0,0,0.35),
-      rgba(0,0,0,0.10)
+    to right,
+    rgba(0,0,0,0.35),
+    rgba(0,0,0,0.10)
   );
 
   z-index:1;
 
 }
 
+
+/* ========================================= */
 /* GLOW EFFECTS */
+/* ========================================= */
 
 .pink-glow{
 
@@ -225,7 +233,10 @@ section{
 
 }
 
+
+/* ========================================= */
 /* HERO CONTAINER */
+/* ========================================= */
 
 .hero-container{
 
@@ -248,6 +259,7 @@ section{
   align-items:center;
 
 }
+
 
 /* ========================================= */
 /* HERO TEXT */
@@ -278,17 +290,83 @@ section{
 
 }
 
+
+/* FIXED HERO HEADING */
+
 .hero-text h1{
 
-  font-size:clamp(3.8rem,7vw,7rem);
-
-  line-height:0.95;
-
-  font-weight:900;
-
-  margin-bottom:30px;
+  font-size:2rem !important;
 
 }
+
+
+/* ========================================= */
+/* HERO TAGLINE */
+/* ========================================= */
+
+.hero-tagline{
+
+  font-size:
+  clamp(
+    1.6rem,
+    3vw,
+    2.8rem
+  );
+
+  font-weight:800;
+
+  line-height:1.2;
+
+  margin-bottom:20px;
+
+}
+
+.hero-tagline .health{
+
+  color:#ffd166;
+
+  text-shadow:
+  0 4px 15px rgba(
+    255,
+    209,
+    102,
+    0.35
+  );
+
+}
+
+.hero-tagline .wealth{
+
+  color:#06d6a0;
+
+  text-shadow:
+  0 4px 15px rgba(
+    6,
+    214,
+    160,
+    0.35
+  );
+
+}
+
+.hero-tagline .her{
+
+  color:#ef476f;
+
+  text-shadow:
+  0 4px 15px rgba(
+    239,
+    71,
+    111,
+    0.35
+  );
+
+}
+
+
+/* ========================================= */
+/* HERO PARAGRAPH */
+/* ========================================= */
 
 .hero-text p{
 
@@ -305,15 +383,26 @@ section{
 
 }
 
+
+/* ========================================= */
 /* HERO BUTTONS */
+/* ========================================= */
 
 .hero-buttons{
+
+  position:absolute;
+
+  right:8%;
+
+  bottom:45px;
 
   display:flex;
 
   gap:18px;
 
   flex-wrap:wrap;
+
+  z-index:20;
 
 }
 
@@ -342,10 +431,10 @@ section{
 
   background:
   linear-gradient(
-  135deg,
-  #ff2e88,
-  #d633ff,
-  #7b2ff7
+    135deg,
+    #ff2e88,
+    #d633ff,
+    #7b2ff7
   );
 
   color:white;
@@ -378,7 +467,10 @@ section{
 
 }
 
+
+/* ========================================= */
 /* FLOATING STATS */
+/* ========================================= */
 
 .floating-stats{
 
@@ -426,6 +518,7 @@ section{
 
 }
 
+
 /* ========================================= */
 /* FORM CARD */
 /* ========================================= */
@@ -437,31 +530,31 @@ section{
   z-index:20;
 
   background:
-  rgba(255,255,255,0.92);
+  rgba(255,255,255,0.15);
 
-  backdrop-filter:blur(20px);
+  backdrop-filter:blur(2px);
 
-  -webkit-backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(2px);
+
+  border:
+  1px solid rgba(
+    255,
+    255,
+    255,
+    0.25
+  );
 
   border-radius:36px;
 
   padding:45px;
 
-  border:
-  1px solid rgba(
-      255,
-      255,
-      255,
-      0.40
-  );
-
   box-shadow:
-  0 30px 80px
+  0 20px 50px
   rgba(
-      0,
-      0,
-      0,
-      0.18
+    0,
+    0,
+    0,
+    0.20
   );
 
 }
@@ -494,11 +587,13 @@ section{
 
   margin-bottom:15px;
 
+  color:#111827;
+
 }
 
 .hero-form-card p{
 
-  color:#666666;
+  color:#374151;
 
   line-height:1.8;
 
@@ -506,7 +601,10 @@ section{
 
 }
 
+
+/* ========================================= */
 /* FORM */
+/* ========================================= */
 
 .form-grid{
 
@@ -562,17 +660,20 @@ section{
 
   box-shadow:
   0 0 0 6px rgba(
-      255,
-      46,
-      136,
-      0.12
+    255,
+    46,
+    136,
+    0.12
   );
 
   transform:translateY(-2px);
 
 }
 
+
+/* ========================================= */
 /* SUBMIT BUTTON */
+/* ========================================= */
 
 .continue-btn{
 
@@ -586,10 +687,10 @@ section{
 
   background:
   linear-gradient(
-  135deg,
-  #ff2e88,
-  #d633ff,
-  #7b2ff7
+    135deg,
+    #ff2e88,
+    #d633ff,
+    #7b2ff7
   );
 
   color:white;
@@ -612,6 +713,7 @@ section{
   transform:translateY(-4px);
 
 }
+
 
 /* ========================================= */
 /* SECTION HEADERS */
@@ -653,10 +755,12 @@ section{
 
 }
 
+
 /* ========================================= */
 /* STATS SECTION */
 /* ========================================= */
 
+/*
 .stats-section{
 
   background:#fff5fb;
@@ -703,83 +807,218 @@ section{
   color:#666666;
 
 }
+*/
+
 
 /* ========================================= */
-/* COUNTDOWN */
+/* COUNTDOWN SECTION */
+/* ========================================= */
+
+.countdown-section{
+
+  padding:100px 8%;
+
+  background:#ffffff;
+
+  text-align:center;
+
+}
+
+
+/* ========================================= */
+/* COUNTDOWN CONTAINER */
+/* ========================================= */
+
+.countdown-container{
+
+  display:flex;
+
+  justify-content:center;
+
+  gap:25px;
+
+  flex-wrap:wrap;
+
+}
+
+
+/* ========================================= */
+/* COUNTDOWN CARD */
 /* ========================================= */
 
 .countdown-card{
 
+  position:relative;
+
+  width:180px;
+
+  height:180px;
+
   background:
   linear-gradient(
-  135deg,
-  #ff2e88,
-  #d633ff,
-  #7b2ff7
+    180deg,
+    #343434 0%,
+    #222222 50%,
+    #151515 100%
   );
-
-  border-radius:40px;
-
-  padding:60px;
-
-  color:white;
-
-  display:flex;
-
-  justify-content:space-between;
-
-  align-items:center;
-
-  gap:40px;
-
-}
-
-.countdown-text span{
-
-  opacity:0.8;
-
-}
-
-.countdown-text h2{
-
-  font-size:3rem;
-
-  margin-top:10px;
-
-}
-
-.countdown-grid{
-
-  display:grid;
-
-  grid-template-columns:repeat(4,1fr);
-
-  gap:18px;
-
-}
-
-.count-box{
-
-  background:
-  rgba(255,255,255,0.12);
-
-  backdrop-filter:blur(12px);
-
-  padding:25px;
 
   border-radius:24px;
 
+  display:flex;
+
+  flex-direction:column;
+
+  align-items:center;
+
+  justify-content:center;
+
+  box-shadow:
+  0 20px 50px rgba(0,0,0,0.18);
+
+  overflow:hidden;
+
+}
+
+
+/* ========================================= */
+/* CENTER DIVIDER */
+/* ========================================= */
+
+.countdown-card::before{
+
+  content:"";
+
+  position:absolute;
+
+  left:0;
+
+  width:100%;
+
+  height:2px;
+
+  top:50%;
+
+  background:
+  rgba(
+    255,
+    255,
+    255,
+    0.15
+  );
+
+}
+
+.countdown-title{
+
+  font-size:2.5rem;
+
+  font-weight:800;
+
+  margin-bottom:50px;
+
+  color:#111827;
+
   text-align:center;
 
-  min-width:110px;
+}
+
+
+/* ========================================= */
+/* COUNTDOWN NUMBER */
+/* ========================================= */
+
+.countdown-card span{
+
+  font-size:5rem;
+
+  font-weight:900;
+
+  color:white;
+
+  line-height:1;
+
+  letter-spacing:2px;
+
+  text-shadow:
+  0 4px 15px rgba(
+    0,
+    0,
+    0,
+    0.35
+  );
 
 }
 
-.count-box h3{
 
-  font-size:3rem;
+/* ========================================= */
+/* COUNTDOWN LABEL */
+/* ========================================= */
+
+.countdown-card small{
+
+  margin-top:18px;
+
+  font-size:0.9rem;
+
+  font-weight:700;
+
+  letter-spacing:2px;
+
+  color:#ff2e88;
 
 }
+
+
+/* ========================================= */
+/* COUNTDOWN HOVER EFFECT */
+/* ========================================= */
+
+.countdown-card:hover{
+
+  transform:
+  translateY(-6px);
+
+  transition:0.3s ease;
+
+  box-shadow:
+  0 25px 60px rgba(
+    255,
+    46,
+    136,
+    0.25
+  );
+
+}
+
+
+/* ========================================= */
+/* COUNTDOWN MOBILE */
+/* ========================================= */
+
+@media(max-width:768px){
+
+  .countdown-container{
+
+    gap:15px;
+
+  }
+
+  .countdown-card{
+
+    width:140px;
+
+    height:140px;
+
+  }
+
+  .countdown-card span{
+
+    font-size:3.5rem;
+
+  }
+
+}
+
 
 /* ========================================= */
 /* ABOUT SECTION */
@@ -871,6 +1110,7 @@ section{
 .feature-number{
 
   min-width:60px;
+
   height:60px;
 
   border-radius:20px;
@@ -888,6 +1128,7 @@ section{
   font-weight:700;
 
 }
+
 
 /* ========================================= */
 /* SPONSORS */
@@ -927,6 +1168,7 @@ section{
   0 12px 35px rgba(0,0,0,0.05);
 
 }
+
 
 /* ========================================= */
 /* FAQ */
@@ -971,6 +1213,7 @@ section{
 
 }
 
+
 /* ========================================= */
 /* CTA SECTION */
 /* ========================================= */
@@ -979,10 +1222,10 @@ section{
 
   background:
   linear-gradient(
-  135deg,
-  #ff2e88,
-  #d633ff,
-  #7b2ff7
+    135deg,
+    #ff2e88,
+    #d633ff,
+    #7b2ff7
   );
 
   text-align:center;
@@ -1047,6 +1290,7 @@ section{
 
 }
 
+
 /* ========================================= */
 /* FOOTER */
 /* ========================================= */
@@ -1086,6 +1330,82 @@ section{
 
 }
 
+
+/* ========================================= */
+/* SOCIAL MEDIA */
+/* ========================================= */
+
+.social-container{
+
+  display:flex;
+
+  gap:15px;
+
+  justify-content:center;
+
+  margin-top:50px;
+
+}
+
+.social-icon{
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  width:50px;
+
+  height:50px;
+
+  border-radius:50%;
+
+  font-size:24px;
+
+  color:#ffffff;
+
+  text-decoration:none;
+
+  transition:
+  transform 0.3s ease,
+  background-color 0.3s ease;
+
+}
+
+.facebook{
+
+  background-color:#1877f2;
+
+}
+
+.twitter{
+
+  background-color:#000000;
+
+}
+
+.instagram{
+
+  background-color:#e1306c;
+
+}
+
+.youtube{
+
+  background-color:#ff0000;
+
+}
+
+.social-icon:hover{
+
+  transform:translateY(-5px);
+
+  filter:brightness(1.1);
+
+}
+
+
 /* ========================================= */
 /* RESPONSIVE */
 /* ========================================= */
@@ -1113,6 +1433,11 @@ section{
 
 }
 
+
+/* ========================================= */
+/* TABLET / MOBILE */
+/* ========================================= */
+
 @media(max-width:768px){
 
   section{
@@ -1129,20 +1454,39 @@ section{
 
   .hero-text h1{
 
-    font-size:3.5rem;
+    font-size:3.5rem !important;
 
   }
 
+  /*
+    Keep the buttons at the bottom-right/bottom
+    of the banner instead of underneath the text.
+  */
+
   .hero-buttons{
 
-    flex-direction:column;
+    position:absolute;
+
+    left:5%;
+
+    right:5%;
+
+    bottom:25px;
+
+    justify-content:center;
+
+    flex-direction:row;
+
+    flex-wrap:wrap;
 
   }
 
   .register-btn,
   .whatsapp-btn{
 
-    width:100%;
+    width:auto;
+
+    min-width:160px;
 
   }
 
@@ -1194,22 +1538,54 @@ section{
 
   .hero-section{
 
-  min-height:auto;
+    min-height:auto;
 
-  background-position:65% center;
+    background-position:65% center;
 
-  padding-top:110px;
+    padding-top:110px;
 
-  padding-bottom:50px;
+    padding-bottom:120px;
+
+  }
+
+  .hero-form-card{
+
+    padding:30px;
+
+    border-radius:28px;
+
+  }
 
 }
 
-.hero-form-card{
 
-  padding:30px;
+/* ========================================= */
+/* SMALL PHONES */
+/* ========================================= */
 
-  border-radius:28px;
+@media(max-width:480px){
 
-}
+  .hero-buttons{
+
+    left:4%;
+
+    right:4%;
+
+    bottom:20px;
+
+    gap:10px;
+
+  }
+
+  .register-btn,
+  .whatsapp-btn{
+
+    min-width:140px;
+
+    padding:14px 18px;
+
+    font-size:0.9rem;
+
+  }
 
 }
