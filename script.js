@@ -1,88 +1,4 @@
 /* ========================================= */
-/* QUICK FORM TO REGISTER PAGE */
-/* ========================================= */
-
-const quickForm =
-document.getElementById("quickForm");
-
-if(quickForm){
-
-    quickForm.addEventListener(
-        "submit",
-        function(e){
-
-            e.preventDefault();
-
-            const fullName =
-            quickForm.querySelector(
-                'input[type="text"]'
-            ).value.trim();
-
-            const phone =
-            quickForm.querySelector(
-                'input[type="tel"]'
-            ).value.trim();
-
-            const email =
-            quickForm.querySelector(
-                'input[type="email"]'
-            ).value.trim();
-
-            const gender =
-            quickForm.querySelector(
-                'select'
-            ).value;
-
-            /* Validation */
-
-            if(
-                !fullName ||
-                !phone ||
-                !email ||
-                !gender
-            ){
-
-                alert(
-                    "Please complete all fields before continuing."
-                );
-
-                return;
-
-            }
-
-            /* Store Data */
-
-            const starterData = {
-
-                fullName: fullName,
-
-                phone: phone,
-
-                email: email,
-
-                gender: gender
-
-            };
-
-            localStorage.setItem(
-                "starterRegistration",
-                JSON.stringify(
-                    starterData
-                )
-            );
-
-            /* Instant Redirect */
-
-window.location.href =
-"register.html";
-
-        }
-    );
-
-}
-
-
-/* ========================================= */
 /* COUNTDOWN TIMER */
 /* ========================================= */
 
@@ -91,89 +7,110 @@ new Date(
     "December 19, 2026 00:00:00"
 ).getTime();
 
-const countdown =
-setInterval(()=>{
 
-    const now =
-    new Date().getTime();
+const daysElement =
+document.getElementById("days");
 
-    const distance =
-    eventDate - now;
+const hoursElement =
+document.getElementById("hours");
 
-    const days =
-    Math.floor(
-        distance /
-        (1000 * 60 * 60 * 24)
-    );
+const minutesElement =
+document.getElementById("minutes");
 
-    const hours =
-    Math.floor(
-        (
-            distance %
+const secondsElement =
+document.getElementById("seconds");
+
+
+if(
+    daysElement &&
+    hoursElement &&
+    minutesElement &&
+    secondsElement
+){
+
+    const countdown =
+    setInterval(()=>{
+
+        const now =
+        new Date().getTime();
+
+        const distance =
+        eventDate - now;
+
+
+        if(distance <= 0){
+
+            clearInterval(
+                countdown
+            );
+
+            daysElement.innerHTML = "00";
+            hoursElement.innerHTML = "00";
+            minutesElement.innerHTML = "00";
+            secondsElement.innerHTML = "00";
+
+            return;
+
+        }
+
+
+        const days =
+        Math.floor(
+            distance /
             (1000 * 60 * 60 * 24)
-        ) /
-        (1000 * 60 * 60)
-    );
-
-    const minutes =
-    Math.floor(
-        (
-            distance %
-            (1000 * 60 * 60)
-        ) /
-        (1000 * 60)
-    );
-
-    const seconds =
-    Math.floor(
-        (
-            distance %
-            (1000 * 60)
-        ) /
-        1000
-    );
-
-    document.getElementById(
-        "days"
-    ).innerHTML = days;
-
-    document.getElementById(
-        "hours"
-    ).innerHTML = hours;
-
-    document.getElementById(
-        "minutes"
-    ).innerHTML = minutes;
-
-    document.getElementById(
-        "seconds"
-    ).innerHTML = seconds;
-
-    if(distance < 0){
-
-        clearInterval(
-            countdown
         );
 
-        document.getElementById(
-            "days"
-        ).innerHTML = "00";
 
-        document.getElementById(
-            "hours"
-        ).innerHTML = "00";
+        const hours =
+        Math.floor(
+            (
+                distance %
+                (1000 * 60 * 60 * 24)
+            ) /
+            (1000 * 60 * 60)
+        );
 
-        document.getElementById(
-            "minutes"
-        ).innerHTML = "00";
 
-        document.getElementById(
-            "seconds"
-        ).innerHTML = "00";
+        const minutes =
+        Math.floor(
+            (
+                distance %
+                (1000 * 60 * 60)
+            ) /
+            (1000 * 60)
+        );
 
-    }
 
-},1000);
+        const seconds =
+        Math.floor(
+            (
+                distance %
+                (1000 * 60)
+            ) /
+            1000
+        );
+
+
+        daysElement.innerHTML =
+        String(days).padStart(2, "0");
+
+
+        hoursElement.innerHTML =
+        String(hours).padStart(2, "0");
+
+
+        minutesElement.innerHTML =
+        String(minutes).padStart(2, "0");
+
+
+        secondsElement.innerHTML =
+        String(seconds).padStart(2, "0");
+
+
+    },1000);
+
+}
+
 
 
 /* ========================================= */
@@ -188,6 +125,14 @@ window.addEventListener(
         document.querySelector(
             ".navbar"
         );
+
+
+        if(!navbar){
+
+            return;
+
+        }
+
 
         if(
             window.scrollY > 50
@@ -215,67 +160,75 @@ window.addEventListener(
 );
 
 
+
 /* ========================================= */
 /* FADE IN ANIMATION */
 /* ========================================= */
 
 const fadeElements =
 document.querySelectorAll(
-
     ".stat-card, .faq-box, .sponsor-box, .feature-box"
-
 );
 
-const observer =
-new IntersectionObserver(
 
-    (entries)=>{
+if(
+    fadeElements.length > 0 &&
+    "IntersectionObserver" in window
+){
 
-        entries.forEach(
-            (entry)=>{
+    const observer =
+    new IntersectionObserver(
 
-                if(
-                    entry.isIntersecting
-                ){
+        (entries)=>{
 
-                    entry.target.style.opacity =
-                    "1";
+            entries.forEach(
+                (entry)=>{
 
-                    entry.target.style.transform =
-                    "translateY(0px)";
+                    if(
+                        entry.isIntersecting
+                    ){
+
+                        entry.target.style.opacity =
+                        "1";
+
+                        entry.target.style.transform =
+                        "translateY(0px)";
+
+                        observer.unobserve(
+                            entry.target
+                        );
+
+                    }
 
                 }
+            );
 
-            }
-        );
+        },
 
-    },
+        {
+            threshold:0.2
+        }
 
-    {
+    );
 
-        threshold:0.2
 
-    }
+    fadeElements.forEach(
+        (element)=>{
 
-);
+            element.style.opacity =
+            "0";
 
-fadeElements.forEach(
+            element.style.transform =
+            "translateY(40px)";
 
-    (element)=>{
+            element.style.transition =
+            "all 0.8s ease";
 
-        element.style.opacity =
-        "0";
+            observer.observe(
+                element
+            );
 
-        element.style.transform =
-        "translateY(40px)";
+        }
+    );
 
-        element.style.transition =
-        "all 0.8s ease";
-
-        observer.observe(
-            element
-        );
-
-    }
-
-);
+}
